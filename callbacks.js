@@ -27,11 +27,44 @@ function getResults(response){
 // console.log("after callbacks execution");
 
 /******************Functional Programming***********************/
+//one way object literals
+let data = {
+    "property": "value"
+}
 
-function user(email,name){
-    this.email = email;
-    this.name = name ;
+//function constructor 
+// function user(email,name,birthYear){
+//     this.email = email;
+//     this.name = name ;
+//     this.birthYear = birthYear;
+// }
+
+let user = {
+    email:"",
+    name:"",
+    birthYear:"",
+}
+// let userOne = new user("savitha@gmail.com","savitha");
+// console.log("user One ", userOne);
+
+
+user.calculateAge = function(){
+    console.log("The cureent age is:"+(2037 - this.birthYear));
 }
 console.log(user);
-let userOne = new user("savitha@gmail.com","savitha");
-console.log("user One ", userOne);
+// let person1 = new user("savitha@gmail.com","savitha",1984);
+// console.log(person1);
+// let person2 = new user("john.k@gmail.com","john",1991);
+// console.log(person2);
+// console.log(user.prototype);
+
+// person1.calculateAge();
+// person2.calculateAge();
+
+// let johnData = {
+//     email: "savitha@gmail.com",
+//     name:"Savitha",
+//     birthYear: 1991
+// }
+
+
