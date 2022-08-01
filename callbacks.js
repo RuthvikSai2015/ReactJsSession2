@@ -51,7 +51,7 @@ let user = {
 user.calculateAge = function(){
     console.log("The cureent age is:"+(2037 - this.birthYear));
 }
-console.log(user);
+console.log(user.isPrototypeOf);
 // let person1 = new user("savitha@gmail.com","savitha",1984);
 // console.log(person1);
 // let person2 = new user("john.k@gmail.com","john",1991);
@@ -68,3 +68,19 @@ console.log(user);
 // }
 
 
+// let father = {
+//     firstProperty: 1,
+//     secondProperty: 2
+//   };
+  
+//   let son = Object.create(father, {
+//     thirdProperty: {
+//       value: 'foo'
+//     }
+//   });
+  
+//   console.log(father.isPrototypeOf(son)); // true
+//   son.firstProperty; // 1
+//   console.log(son);
+
+  
