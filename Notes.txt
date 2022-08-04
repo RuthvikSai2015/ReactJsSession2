@@ -425,6 +425,72 @@ Function declarations and Expressions
 
 ====================================================================================================
 
+  Array is inherting the methods from Prototype Object 
+
+====================================================================================================
+
+  AJAX -> Asynchronous Javascript(callbacks) and XML
+
+  AJAX is not a programming language its a programming concept
+
+  => using callbacks we can acheive asynchronous way of programming 
+  => Application Programming Interface
+
+ -> Reads data from a web server after the page has loaded
+ -> Updates the page(Element Content) without reloading the page
+ -> send data to web server in the background
+
+  Approach 1: XMLHttpRequest Object to make Ajax call . XMLHttpRequest() 
+
+  Approach 2 : we will use jQuery to make an ajax calls .
+
+  Approach 3: fetch() API which is used to make XMLHttpRequest  .flexible structure 
+============================================================================================
+
+  Promises -> 
+ 
+ -> in callbacks there is a situtaion called callback hell(nesting the callbacks)
+ -> Promises are used to achieve asynchronous operation 
+
+  A promise is in one of the these states
+
+  -> Pending : Initial state
+  -> fulfilled : that operation was completed successfully
+  -> rejected  : that operation has failed 
+
+  Advantages of Promises
+
+ -> Improves Code Readability
+ -> Better handling of asynchronous operations
+ -> Better flow of control and better Error handling
+==========================================================================================
+Filter and Maps
+
+ filter() -> returns a new array containing the elements that passes a certain criteria
+
+ let oldArray = [];
+ let newArray = oldArray.filter(currentValue,index,array){
+ }
+
+ Map => if we want our resultant to be mapped to some values 
+
+==============================================================================================
+
+  Javascript Modules 
+ 
+ => was introduced in ES6 and later 
+ => splitting our code into seperate components 
+ => very easy to maintain and organize
+
+  exports and imports in javascript 
+
+  
+
+ 
+  
+ 
+  
+
   
 
 
