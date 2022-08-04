@@ -1,48 +1,13 @@
-<!DOCTYPE HTML>
-<html>
-  
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <script src=
-"https://code.jquery.com/jquery-3.6.0.min.js">
-    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-  
 <body>
-  
-    <script>
-  
-        // function ajaxCall() {
-        //     $.ajax({
-  
-        //         // Our sample url to make request 
-        //         url: 'https://jsonplaceholder.typicode.com/todos/1',
-  
-        //         // Type of Request
-        //         type: "GET",
-  
-        //         // Function to call when to
-        //         // request is ok 
-        //         success: function (data) {
-        //             var x = JSON.stringify(data);
-        //             alert(x);
-        //         },
-  
-        //         // Error handling 
-        //         error: function (error) {
-        //             console.log(`Error ${error}`);
-        //         }
-        //     });
-        // }
-        // ajaxCall();
-
-         let url = 'https://jsonplaceholder.typicode.com/todos/1';
-
-          //Make our Request
-          fetch(url,{method: 'GET'}).then(Result => Result.json()).then(string => {
-                console.log("sucess using fetch",string);
-          })
-          .catch(errorMsg => { console.log("unable to process the request")})
-    </script>
+    <h1>Modules in Javascript</h1>
 </body>
-  
+<script type="module" src="main.js"></script>
 </html>

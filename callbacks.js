@@ -23,7 +23,7 @@ function getResults(response){
     console.log("Response from the server: "+response);
     console.log("after response");
 }
-// serverRequest("The glass is half ",getResults);
+serverRequest("The glass is half ",getResults);
 // console.log("after callbacks execution");
 
 /******************Functional Programming***********************/
