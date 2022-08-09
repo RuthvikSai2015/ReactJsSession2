@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First React App</title>
+</head>
+<body>
+    <div id="root"></div>
+    <!-- Type 2 -->
+    <!-- <script type="text/babel">
+      const name = "Krishna";
+      const myData = <div><h1> {name} </h1></div>;//Create Element
+      ReactDOM.render(myData,document.getElementById("root"));
+    </script> -->
+    <!-- Type 3 -->
+    <!-- <script type="text/babel">
+    const person = {
+        "name":"Krishna",
+        "age":70
+    }
+    const displayData = (per) =>{
+        return per.name + "You are " + per.age +" yrs old";
+    }
+    const myData = <div><h1> hai {displayData(person)} </h1></div>;
+    ReactDOM.render(myData,document.getElementById("root"));
+    </script> -->
+    <!-- Type 4-->
+    <script type="text/babel">
+        const year = 2022;
+        const Company = () => {
+            return <h4> Ashok IT </h4>;
+        }
+        //<Company/> {Company()}
+        const Header = function(){
+            return (<div><h5> Today is 9th August {year} </h5> <Company/></div>);
+        }
+        ReactDOM.render(<Header/>,document.getElementById("root"));
+    </script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>  
+    <!-- Type 1
+         <script src="myheader.js"></script>   --> 
+</body>
+</html>
