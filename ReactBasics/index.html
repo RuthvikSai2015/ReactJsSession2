@@ -27,7 +27,7 @@
     ReactDOM.render(myData,document.getElementById("root"));
     </script> -->
     <!-- Type 4-->
-    <script type="text/babel">
+    <!-- <script type="text/babel">
         const year = 2022;
         const Company = () => {
             return <h4> Ashok IT </h4>;
@@ -37,6 +37,30 @@
             return (<div><h5> Today is 9th August {year} </h5> <Company/></div>);
         }
         ReactDOM.render(<Header/>,document.getElementById("root"));
+    </script> -->
+    <script type="text/babel">
+        // function Employee(props){
+        //   // props.dept = "Development";
+        //    return <h1> You have been allocated to {props.dept}</h1>;
+        // }
+        // const value = "Dev";
+        // ReactDOM.render(<Employee dept="testing"/>,document.getElementById("root"));
+        function Header(props){
+            return <h1> Welcome to {props.company} Company</h1>;
+        }
+        function Footer(){
+            return <h1>Contact us !12344</h1>;
+        }
+        function Maindoc(props){
+            return (
+                <div>
+                     {props.children[0]} 
+                    <h4> This is my Company details </h4>
+                    {props.children[1]}
+                </div>
+            )
+        }
+        ReactDOM.render(<Maindoc><Header company="ABC"/><Footer/></Maindoc>,document.getElementById("root"));
     </script>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
