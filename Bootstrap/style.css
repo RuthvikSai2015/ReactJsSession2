@@ -1,3 +1,13 @@
 .p-class{
     color:red !important;
 }
+.mx-2{
+    margin-left:100px !important;
+}
+.navbar-first{
+    color:white !important;
+}
+
+.bg-success {
+    background-color: grey !important;
+}
