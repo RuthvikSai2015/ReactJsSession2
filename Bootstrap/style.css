@@ -11,3 +11,10 @@
 .bg-success {
     background-color: grey !important;
 }
+.carousel-item img{
+    height:300px !important;
+}
+.row img{
+     height:150px;
+     width:150px;
+}
