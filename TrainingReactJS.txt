@@ -1,0 +1,807 @@
+React Js
+++++++++++++++++++++++++++
+
+Savitha
+8+ Fullstack developer
+front end and back end
+
+what is front-end?
+------------------------------------------------
+  user interacts (user interface)
+------------------------------------------------
+what is back-end?
+
+  server-side development mainly deals with databases,scripts and architecture
+
+what is full-stack?
+
+  comprises both front end and back end with the deployments
+
+Pre-requisites to learn React JS
+
+  => we need basics of HTML ,CSS
+  => basics of Javascript 
+
+
+Course Content 
+----------------------------------------------------
+Learn Javascript and React JS
+
+Topics covered in this course are as follows:
+
+1) Javascript
+2) React Introduction
+3) Environment Setup
+4) Essentials
+5) States and Props 
+6) React Hooks
+7) Router and Forms
+8) Styling in React JS
+9) Redux
+10) Important Topics
+11) Integrations 
+12) Real time Project using React JS
+
+Course duration : 2 Months
+class: Mon - Sat
+Time : 7:30 am(1.5 hrs)
+
+Advantages with Ashok IT
+++++++++++++++++++++++++++++++++++++++++++++++
+1) Live Online Training
+2) Soft Copy Material 
+3) doubts clarifications
+4) back up videos - 6 months access
+5) telegram group for communication
+6) Resume preparations
+7) Placement assistance 
+
+++++++++++++++++++++++++++++++++++++++++++++++
+
+you can check the complete details of this course
+ 
+https://ashokitech.com/react-js-online-training
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+What is React JS?
+
+react js is a javascript library for building user interfaces .it is the most popular front end development tool currently in use
+
+What are the advantages of React JS?
+
+-> Easy to write code and light weight 
+-> Reusable component based 
+   ex: login component for employee
+       users : agents,students 
+       Generic component login can be re-used for all type of        users -- reusable component
+-> Design simple views for your application
+-> Not too hard to learn 
+-> React makes it painless to create interactive UI's 
+
+what is the demand for React JS?
+
+  react js is one of the most demanded in market
+  some of the tech companies like paypal,netflix,facebook,ebay etc
+
+what is the demand for job opportunites?
+
+  naukri.com
+
+From tomorrow regular classes will be started 
+you can attend 3 classes for free
+using the same zoom link 
+
+
+what is javascript ? 
+
+   javascript is a programming language mainly scripting language which we can use to develop any type of application(Web development)
+   client side scripting language 
+
+   when you request for a webpage and you get a static content
+
+   when we request for a webpage we get a dynamic content 
+
+History of Javascript 
+
+  javascript is backward compatible 
+ 
+  1990 -> HTML, CSS , Webpage(static) 
+
+  1993 -> mosaic Netscape was commercialised 
+
+  Microsoft came up with Internet Explorer with Windows 
+
+  java was gaining poplurity 
+
+  Netscape hired brendien eide working on schema programming language
+
+  in 10 days a small language was developed and the name of the language was mocha , changed to LiveScript
+
+  Javascript -> Netscape Navigator2 
+
+  ---------------------------------------------------------------------------------------------------------------
+
+  Microsoft did  a reverse engineering ,developed a new language called JScript
+
+  Netscape went to ECMA -> basically to create standards 
+
+  ECMA -> European Computers Manufacturers Association 
+
+  ECMA Script rules 
+
+  1999 huge loss  then made Netscape as Opensource -> Mozilla 
+
+  ECMA SCRIPT 1 , .. 2 , ES -7 , ES -8 , ES 2015 , ES 2017 , ES 2021 
+
+----------------------------------------------------------------------------------------------------------------------
+
+ Jscript and Action Scripts were no more used 
+
+---------------------------------------------------------------------------------------------------------------------
+
+ javascript was interpreted language 
+
+   ->  in other whole code gets get compiled -> converted to machine undersandable -> executed
+   -> line by line execution is carrried out 
+
+google came up with Google Chrome (V8 engine for javascript) 
+
+  -> compiled and interpreted 
+  -> JIT (just in time compiler) 
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+  start to write the code and find a platform to run the javascript 
+
+  2021 and later all the browsers have come up with an engine 
+
+what are the options to write javascript code ?
+
+ -> Online Editors 
+ -> Offline Editors (Microsoft Visual Studio code) 
+ -> IDE(Integrated Development Environment) 
+
+Install Visual Studio Code 
+   -> install live-server extension 
+
+  Values and Variables 
+
+   value is a smallest unit of information that exist 
+
+   let firstName = "amazing";
+    -- variable named firstName is created in memory 
+   
+   -> used to store data
+   -> can be loaded as container
+
+     Rules for declaring variable names
+
+    -> must contain only letter,digit or $ and _ symbol
+    -> Must begin with a letter or _ (underscore)
+    -> it should not use any keywords like let , else;
+    -> Variables are case sensitive
+    -> Camel case 
+
+=========================================================================================
+
+      Data Types in Javascript 
+
+      There are 7 Primitive Data Types
+
+      1. Number -> Floating Point Numbers used for decimals and integers ex: let age=31
+
+
+      2. String : Sequence of characters ex: let firstName = "John"
+      3. Boolean : logical type that can be only true or false
+      4. Undefined : Value taken by a variable that is not yet defined 
+
+      5. Null : Also means empty value ;
+      6.Symbol(ES2015) : Value that is unique and cannot be changed
+      7. BigInt(ES2020): Larger Integers that Number type can hold
+
+    Strings
+       \ -> escape character to cancel special meaning 
+
+     javascript has dynamic typing 
+
+----------------------------------------------------------------------------------------------
+  let ,const and var 
+
+   let is one of the way for declaring variables
+
+   ES6
+
+   var is one of the way for declaring variables 
+
+   const  
+   
+   const birthYear = 1991;
+   let age = 31; 
+
+------------------------------------------------------------------------------------------
+  Operators
+  
+  An Operator is a symbol that represents an action or process 
+ 
+  let sum = 10+20;
+
+ -> Arithmetic Operators(+,-,*,/,%, **,++,--)
+ -> Assigment Operator (x=y, +=,-=, 
+ -> Comparison Operator( == , ===, != ,!==,>,<,>=,<= ) 
+ -> Logical Operator ( && logical AND(returns true if both conditions are true), || logical OR(returns true if one condition is met),! logical NOT)
+ -> Type Operator(typeof,instanceof)
+ -> Bitwise Operator(binary representation)(&,!,^,~,>>,<<)
+
+  == doesnt work with datatype of variable it only works with content
+  === works with content an data type as well 
+
+  Typeof Operator
+
+  -- typeof [ returns the type of variable]
+  -- instanceof[ Returns true if an object is instance of same object type(particular class),return is boolean)
+
+
+
+    Assignment1
+  
+  /*
+Mark and John are trying to compare their BMI (Body Mass Index), 
+which is calculated using the formula: BMI = mass / height ** 2 = mass / (height * height). (mass in kg and height in meter).
+1. Store Mark's and John's mass and height in variables
+2. Calculate both their BMIs using the formula (you can even implement both versions)
+3. Create a boolean variable 'markHigherBMI' containing information about whether Mark has a higher BMI than John.
+TEST DATA 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
+TEST DATA 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76 m tall.
+GOOD LUCK 😀
+*/ 
+
+//step1
+const heightMark = 1.69;
+const heightJohn = 1.95;
+const massJohn = 92;
+const massMark = 78;
+
+//step2 
+let BMIMark = massMark/heightMark ** 2;
+let BMIJohn = massJohn/(heightJohn * heightJohn);
+
+const markHigherBMI = BMIMark > BMIJohn ;
+
+console.log("Higher BMI ------",markHigherBMI);
+
+===================================================================================
+
+functions 
+
+ -- basic building blocks of real time javascript 
+
+modes in javascript 
+
+  - secure mode and unsecure mode
+  - strict mode
+
+  return the data as well
+
+Function declarations and Expressions 
+
+ function fruitProcessor(apples,oranges){
+    //console.log(apples,oranges);
+    const juice = `Juice with ${apples} and ${oranges}`;
+    return juice ;
+}
+
+  const calcAge = function(birthYear){
+    return  2037 - birthYear;
+}
+
+
+ ===Arrow Functions ==================
+
+  -> lot easier and faster to write
+  -> we dont need curly braces
+  -> return happens implicitly (no return keyword)
+
+    const yearsUntilRetirement = (birthYear,age) => {
+   // const age = 2037 - birthYear;
+    const retirementYears = (2037 - birthYear) - age;
+    return retirementYears;
+ }
+
+===================================================================
+
+ functions calling other functions
+
+  function cutPieces(fruit){
+    return fruit*4;
+  }
+  function fruitProcessor(apples,oranges){
+    const applePieces = cutPieces(apples);
+    const orangePieces = cutPieces(oranges);
+    const juice = `Juice with ${applePieces} pieces of apples and ${orangePieces} pieces of orange`;
+    return juice ;
+  }
+ -> Code Reusability 
+
+
+==============================================================================================
+
+  Arrays 
+
+  -> storing a list of items
+
+  -> Array is not a primitive data type 
+  -> Mutate Arrays
+  -> Whole Signature cannot be replaced with const 
+
+  Basic Operations on Array 
+
+   Adding Elements - push
+   Removing Elements -- pop
+
+   shift(remove the elements at beginning) and unshift(add elements at beginning) 
+
+   indexOf method and includes 
+
+==============================================================================================
+
+  Objects 
+
+  data [ firstName : john,lastName : schmed]
+
+  const data = { firstName : "John" , lastName :"Schmed" } 
+ 
+  { } -> Object literal syntax 
+
+  In arrays order matters a lot and how we access the elements 
+  in objects it is unstructured data 
+
+  Dot and Bracket Notation
+
+  .(object properties) and [](express evaluation)
+
+ how we can add property to object?
+ 
+  . and [] for adding 
+
+  access functions in objects
+  this reference
+
+==============================================================================================
+
+  Scope -> visibility of an element (variables,functions,objects)
+
+  Synchronous way of execution  
+
+  Callbacks(achieve Asynchronous way of programming)
+
+==========================================================================================
+
+ A callback function is a function that is passed as an argument to another function to be "called back" at a later time
+
+  The function which takes callback as argument is treated as higher -order functions
+
+  example(real time example)
+
+==================================================================================================
+
+  Object Oriented Programming 
+
+  objects is a data structure used as a container to store the data(property and value)
+
+  object oriented programming is a programming paradigm based on the concept of objects
+
+  objects are building blocks of applications and interact with one another 
+
+  Why does OOP exist?
+
+    -> it is very hard to maintain large code bases
+   
+    -> most widely used programming paradigm in large scale software engineering 
+
+  in Traditional OOP we can achieve this object concepts by classes (Blue print of objects)
+ 
+  User {
+    
+         userName
+         password
+         email
+         login(pwd){
+         }
+         sendMessage(str){
+         }
+   } 
+ ======================================================================================================
+ 
+  Prototype -- property
+
+  when we create functions,array,object , javascript engine adds a property inside a function,array,object.
+
+  Prototype property is basically an object where we can attach methods and properties 
+
+  Arrays ->  the operations associated with array is in my prototype object
+
+  defining any method using prototype keyword (prototype object) 
+
+
+====================================================================================================
+
+  Array is inherting the methods from Prototype Object 
+
+====================================================================================================
+
+  AJAX -> Asynchronous Javascript(callbacks) and XML
+
+  AJAX is not a programming language its a programming concept
+
+  => using callbacks we can acheive asynchronous way of programming 
+  => Application Programming Interface
+
+ -> Reads data from a web server after the page has loaded
+ -> Updates the page(Element Content) without reloading the page
+ -> send data to web server in the background
+
+  Approach 1: XMLHttpRequest Object to make Ajax call . XMLHttpRequest() 
+
+  Approach 2 : we will use jQuery to make an ajax calls .
+
+  Approach 3: fetch() API which is used to make XMLHttpRequest  .flexible structure 
+============================================================================================
+
+  Promises -> 
+ 
+ -> in callbacks there is a situtaion called callback hell(nesting the callbacks)
+ -> Promises are used to achieve asynchronous operation 
+
+  A promise is in one of the these states
+
+  -> Pending : Initial state
+  -> fulfilled : that operation was completed successfully
+  -> rejected  : that operation has failed 
+
+  Advantages of Promises
+
+ -> Improves Code Readability
+ -> Better handling of asynchronous operations
+ -> Better flow of control and better Error handling
+==========================================================================================
+Filter and Maps
+
+ filter() -> returns a new array containing the elements that passes a certain criteria
+
+ let oldArray = [];
+ let newArray = oldArray.filter(currentValue,index,array){
+ }
+
+ Map => if we want our resultant to be mapped to some values 
+
+==============================================================================================
+
+  Javascript Modules 
+ 
+ => was introduced in ES6 and later 
+ => splitting our code into seperate components 
+ => very easy to maintain and organize
+
+  exports and imports in javascript 
+
+ import {default as doubleUtil} from './utils.js';
+ import {double} from './utils.js';
+
+===============================================================================================
+
+  Crash Course on HTML and CSS
+
+  HTML => Hyper Text MarkUp Language 
+  => develop static pages
+  => content visibility 
+
+  invented by Sir Tim Berneers Lee in late 1990's
+
+  HTML as Document 
+  => Head Section  => describe the settings of my page 
+  => Body(Content) => content of the page 
+
+ HTML Elements => elements starting with open and close tags
+ Attributes => additional information about my element
+
+ ID => to be unique
+ Class => multiple
+
+ Apply space around Html element => padding
+
+ CSS Box Model => fundamental part of CSS how elements are displayed on web pages
+
+  Content : text ,images
+  Padding: area around the content
+  Border : goes aroung padding and content
+  Margin: space between boxes
+  Fill Area: area that gets filled with background-color
+
+=====================================================================================
+
+https://jsonplaceholder.typicode.com/
+
+  Using HTMl and CSS 
+  Create form -> inputs -> fetch apis
+  display on Ui(API Response)
+  Module1 ->fetch the data -> Module2
+  Module2 ->HTML 
+
+  build User Interfaces
+  React JS is a javascript library 
+
+  => splitting the code into seperate into functionalities
+  => Components 
+
+  Disadvantages
+
+  => create => manage => route 
+  => SEO => multipage => multiple pages = single page => only one page
+
+   Rendering => display HTML Elements 
+   DOM => Document Object Model = creates 
+
+   Virtual DOM
+
+   Add React to a Website – React (reactjs.org)
+   
+   Visual Studio Code
+   Live Server
+   ES7-Enable
+
+   https://reactjs.org/docs/cdn-links.html
+
+   https://reactjs.org/docs/react-dom.html
+
+   https://reactjs.org/docs/dom-elements.html
+
+   https://babeljs.io/docs/en/
+
+   const element = <h1>Hello, world!</h1>;
+
+   JSX
+
+   Combine both HTML and javascript in one container called JSX
+
+   https://reactjs.org/docs/components-and-props.html
+
+  Components 
+ 
+ => very very simple and effective way of loading content into Single Page Application
+ => independent reusable pieces
+
+   Functional Components and Class Components
+
+   function(){
+   }
+
+   class content extends React.Component(){
+   }
+  => Functional Component with Properties(parameters)
+     Pure Functions 
+
+    Parent and Child Component
+
+  hierarchy => div(root) => div => h1(Header) => h4 => h1(Footer)
+
+  react 
+  react-dom
+
+  Virtual DOM 
+  using VS-CODE we have seen react app 
+  js -> createElement
+  ReactDOM.render()
+
+  React Component LifeCycle
+
+  Constructor -> Specific to class 
+  State => Change in Component 
+
+  Node and NPM
+
+  npx create-react-app sampleapp
+  localhost:3000 
+
+   https://getbootstrap.com/docs/5.0/getting-started/introduction/
+
+  https://developer.mozilla.org/en-US/docs/web/css/flex
+
+  Bootstrap => Responsive Web Design 
+
+  mobile-first 
+
+ Screen Resolution : 1963 * 1000 => Element Size => 60 px
+
+ Screen Resolution : 1973 * 2000 => Element Size => 60px
+
+ Screen Resolution : 1563* 800 => Element Size => 60px
+
+ CSS Precedance => Inline -> Internal -> External
+
+ !important 
+
+  marquee tag will not work in all the browsers 
+ https://getbootstrap.com/docs/5.0/components/carousel/
+
+ 1368*725 => avoid flickering , blurring of images 
+
+ 12 columns => container 
+ small device will be having 12 columns => ? 1 image
+ medium device will be having 6 columns =? more width => 2 images
+ large device will be having 4 columns =? more width => 3 images 
+
+https://fonts.google.com/specimen/Open+Sans
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+     body {
+             font-family: "Sofia", sans-serif;
+          }
+
+ Font-Awesome icons 
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+==================================================================================================================================
+
+ React 
+
+ Public Folder
+ 1. static fonts
+ 2. images
+ 3. HTML files
+ 
+ React Project Dependencies
+
+  React and React DOM
+  npm install => install dependencies(real) node_modules
+
+  To add a dependency(package ) to the project
+
+  1. npm install <<packageName>> package.json => recommended
+  2. directly make changes in package .json (add dependency and version) 
+
+  dependency and dev dependency 
+
+  dependencies => react ,react-dom => nom install react
+
+  dev dependency => only used by developer 
+                    eslint, prittier,dayjs => format the code 
+
+  npm install --save-dev dayjs
+ 
+  Exports 
+
+  => Named Export
+  => Default Export 
+
+  useEffect
+  Functional Hooks
+  Hook Method and rules
+
+  React Fragment
+  
+  we can avoid dummy divs(parent elements) using React.Fragment 
+
+  3 ways
+  
+ 1. <React.Fragment>
+ 2. <Fragment> = Named Export 
+ 3. <> </>
+
+ React Props 
+ =================================================================
+
+ props can be used to pass data from parent to child component
+
+ attributes to Components
+
+ 1. Props can be destructured for easy usage
+ 2. Props can have default values
+ 3. Props will take default value as true if no value is passed
+ 4. Passing object as props , Spread Operator
+
+  destructuring of object in react 
+
+  const userData = { name:"Kumar", age:50 }
+
+  const {name,age} = userData;
+  
+  https://developer.mozilla.org/enUS/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+
+  Math.min(1,2,3); //1
+
+  let array = [1,2,3];
+ 
+  Math.min(array); // NaN
+
+  Math.min(...array) //1
+
+ 
+==========================================================================================
+ Conditional Rendering
+
+ Based on Some condition we want to show our content or not
+
+ 1. Show or Hide Component
+ 2. Implementing the Role Based Permission Level
+ 3. Toggling Functionalities(switch between components)
+
+  Once you have built the components 
+  
+  Comments
+  
+  README.md
+   1. What is the purpose of the component
+   2. what is props
+   3. does it handle errors 
+
+  Use of Story Book
+  https://storybook.js.org/docs/react/get-started/introduction
+
+ Situation
+
+  1. one situation is present so i have two results
+ 
+  => if operator =>login => execute UserGreeting else GuestGreeting (if )
+  conditional operator ternary 
+
+  => condition ? if true this will return: if false this will return 
+
+  2. logical AND (&&)  -- only one expected result
+
+     const value = true && "license";
+
+     age>18 && <DrivingLicense/>
+
+     true && true => t
+     false && true => f
+     true && false => f
+     false && false => f
+
+==================================================================================
+  React Events 
+
+ 
+
+ 
+ 
+     
+
+ 
+ 
+  
+
+
+
+  
+
+  
+  
+
+ 
+  
+ 
+  
+
+  
+
+
+ 
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
