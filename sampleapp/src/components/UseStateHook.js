@@ -25,28 +25,33 @@ function UseStateHook() {
         //     pwdValue = event.target.value;
         // }
       //  console.log(" changed value", event.target.value)
+        const {name,value} = event.target;
         setFormInputs({
             // email : emailValue,
             // password  : pwdValue
-            [event.target.name]: event.target.value
+            ...forminputs,
+           // [event.target.name]: event.target.value
+           [name]:value
         })
         console.log("form inputs---", forminputs)
     }
     const btnClicked = () => {
         console.log("Button Clicked");
-        //count=count+1;
-        setCount(count + 1);
+        // setCount(count + 1);//0+1//re-render
+        // setCount(count + 1); //0+1
+        setCount((previousCount)=>previousCount+1);//0+1
+        setCount((previousCount)=>previousCount+1);//1+1
     }
     return (
         <>
             <p>You clicked {count}</p>
-            {/* <button onClick={(btnClicked)}>Add Counter</button> */}
+            <button onClick={(btnClicked)}>Add Counter</button>
             {/* <button onClick={()=>setCount(count+1)}>Add Counter</button> */}
-            <form>
+            {/* <form>
                 <label>Email:</label><input name="email" type="email" onChange={handleInputChange} /><br />
                 <label>Password:</label><input name="password" type="password" onChange={handleInputChange} /><br />
                 <button>Submit</button>
-            </form>
+            </form> */}
         </>
     )
 }

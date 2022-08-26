@@ -4,13 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import UseStateHook from './components/UseStateHook';
+import UseEffectHook from './components/useEffectHook';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <StrictMode>
+  <>
     {/* <App /> */}
-    <UseStateHook />
-  </StrictMode>
+    {/* <UseStateHook /> */}
+    <UseEffectHook name="useEffectHook"/>
+    <UseEffectHook name="useEffectHook1"/>
+  </>
 );
 
 // If you want to start measuring performance in your app, pass a function
