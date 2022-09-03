@@ -5,14 +5,21 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import UseStateHook from './components/UseStateHook';
 import UseEffectHook from './components/useEffectHook';
+import CustomHookData from './components/CustomHookData';
+import CounterParent from './components/CounterParent';
+import ErrorBoundaryContainer from './components/ErrorBoundaryContainer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
     {/* <App /> */}
     {/* <UseStateHook /> */}
-    <UseEffectHook name="useEffectHook"/>
-    <UseEffectHook name="useEffectHook1"/>
+    {/* <UseEffectHook name="useEffectHook"/> */}
+    {/* <UseEffectHook name="useEffectHook1"/> */}
+    {/* <useFetchCustomHook url="https://jsonplaceholder.typicode.com/posts"/> */}
+    {/* <CustomHookData/> */}
+    {/* <CounterParent/> */}
+    <ErrorBoundaryContainer/>
   </>
 );
 
