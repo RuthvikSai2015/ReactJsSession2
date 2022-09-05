@@ -1,4 +1,4 @@
-import React,{StrictMode} from 'react';
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -8,6 +8,9 @@ import UseEffectHook from './components/useEffectHook';
 import CustomHookData from './components/CustomHookData';
 import CounterParent from './components/CounterParent';
 import ErrorBoundaryContainer from './components/ErrorBoundaryContainer';
+import ButtonComponent from './components/Button';
+import RouterExample from './components/RouterExample';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,7 +22,11 @@ root.render(
     {/* <useFetchCustomHook url="https://jsonplaceholder.typicode.com/posts"/> */}
     {/* <CustomHookData/> */}
     {/* <CounterParent/> */}
-    <ErrorBoundaryContainer/>
+    {/* <ErrorBoundaryContainer/> */}
+    {/* <ButtonComponent/> */}
+    <BrowserRouter>
+      <RouterExample />
+    </BrowserRouter>
   </>
 );
 
