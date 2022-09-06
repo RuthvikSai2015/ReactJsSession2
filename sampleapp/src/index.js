@@ -11,6 +11,7 @@ import ErrorBoundaryContainer from './components/ErrorBoundaryContainer';
 import ButtonComponent from './components/Button';
 import RouterExample from './components/RouterExample';
 import { BrowserRouter } from 'react-router-dom';
+import ReactFormExample from './components/ReactFormExample';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,7 +27,8 @@ root.render(
     {/* <ButtonComponent/> */}
     <BrowserRouter>
       <RouterExample />
-    </BrowserRouter>
+    </BrowserRouter> 
+    {/* <ReactFormExample/> */}
   </>
 );
 
