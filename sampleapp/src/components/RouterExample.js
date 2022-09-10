@@ -53,6 +53,7 @@ function Posts() {
             </ul>
         </>
     )
+    
 }
 function Post() {
     const [content, setContent] = useState({});

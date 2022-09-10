@@ -12,6 +12,8 @@ import ButtonComponent from './components/Button';
 import RouterExample from './components/RouterExample';
 import { BrowserRouter } from 'react-router-dom';
 import ReactFormExample from './components/ReactFormExample';
+import FormikYup from './components/FormikYup';
+import ReactContextApi from './components/ReactContextApi';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,13 +24,15 @@ root.render(
     {/* <UseEffectHook name="useEffectHook1"/> */}
     {/* <useFetchCustomHook url="https://jsonplaceholder.typicode.com/posts"/> */}
     {/* <CustomHookData/> */}
-    {/* <CounterParent/> */}
+    <CounterParent/>
     {/* <ErrorBoundaryContainer/> */}
     {/* <ButtonComponent/> */}
-    <BrowserRouter>
+    {/* <BrowserRouter>
       <RouterExample />
-    </BrowserRouter> 
-    {/* <ReactFormExample/> */}
+    </BrowserRouter>  */}
+    {/* <ReactFormExample/>
+    <FormikYup /> */}
+    {/* <ReactContextApi/> */}
   </>
 );
 

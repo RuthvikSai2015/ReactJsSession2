@@ -12,11 +12,12 @@ function ReactFormExample() {
         )
     }
     const handleSubmit = () => {
+       // event.preventDefault();
         setFormErrors(validate(formValues));
     }
     const validate = (values) => {
         let errors = {};
-        const regexp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        const regexp = !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
         if (!values.email) {
             errors.email = " Email is required ";
         } else if (regexp.test(values.email)) {
