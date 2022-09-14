@@ -3,11 +3,23 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import Button from '../src/Components/button/Button'
+import Component1 from '../src/Components/Component1';
+import Component2 from '../src/Components/Component2';
+import { Provider } from 'react-redux';
+import store from './Components/store/Store'
+import Counter from './Components/Counter';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <Provider store={store}>
+      {/* <Button />
+      <Component1 />
+      <Component2 /> */}
+      <Counter/>
+    </Provider>
+
   </React.StrictMode>
 );
 

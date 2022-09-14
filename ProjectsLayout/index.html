@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <title>Sample Web Page</title>
+    <style>
+        body{
+            display: grid;
+            grid-template-rows: 80px 1fr 70px;
+            grid-template-columns: 20% 1fr 15%;
+            height:100vh; 
+            grid-template-areas: 
+            "header header header"
+            "nav article aside"
+            "nav footer footer";
+            grid-row-gap:10px;
+            grid-column-gap:10px;
+        }
+        #page-header{
+            grid-area:header;
+        }
+        #main-nav{
+            grid-area:nav;
+        }
+        #main-article{
+            grid-area:article;
+        }
+        #side-bar{
+            grid-area: aside;
+        }
+        #footer{
+            grid-area: footer;
+        }
+        header,article,nav,aside,footer{
+            padding:1.2em;
+            background: gold;
+        }
+    </style>
+</head>
+<body>
+    <header id="page-header">Header</header>
+    <article id="main-article">Main Section</article>
+    <nav id="main-nav">Nav</nav>
+    <aside id="side-bar">Side Bar</aside>
+    <footer id="footer">Footer</footer>
+</body>
+</html>

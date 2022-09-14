@@ -18,13 +18,13 @@ import ReactContextApi from './components/ReactContextApi';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    {/* <App /> */}
+    <App />
     {/* <UseStateHook /> */}
     {/* <UseEffectHook name="useEffectHook"/> */}
     {/* <UseEffectHook name="useEffectHook1"/> */}
     {/* <useFetchCustomHook url="https://jsonplaceholder.typicode.com/posts"/> */}
     {/* <CustomHookData/> */}
-    <CounterParent/>
+    {/* <CounterParent/> */}
     {/* <ErrorBoundaryContainer/> */}
     {/* <ButtonComponent/> */}
     {/* <BrowserRouter>
