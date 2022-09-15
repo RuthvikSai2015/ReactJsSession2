@@ -7,6 +7,7 @@ function Button() {
     // return (
     //     // <button className="button-color">Button Component</button>
     //     <button style={btnStyle}>Button Component</button>
+    //     <button style={{backgroundColor:'red'}}>Button </button>
     // )
     const ToDoComp = styled.div`
         /* This renders the buttons above... Edit me! */
