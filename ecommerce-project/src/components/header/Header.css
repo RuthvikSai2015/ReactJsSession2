@@ -1,0 +1,9 @@
+.header{
+    display:flex;
+    background-color: black;
+    position: sticky;
+    height:50px;
+}
+.text-color{
+    color:white
+}
