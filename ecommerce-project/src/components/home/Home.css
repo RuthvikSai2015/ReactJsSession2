@@ -1,0 +1,5 @@
+.products-align
+{
+    display:flex;
+    flex-direction: row;
+}

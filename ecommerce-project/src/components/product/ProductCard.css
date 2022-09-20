@@ -1,0 +1,15 @@
+.product{
+    display: flex;
+    flex-direction: column;
+    margin:10px;
+    padding:10px;
+    background: #fff;
+    height: 100%;
+    position: relative;
+    overflow:hidden;
+    box-shadow: 2px 2px 6px 0px #888888;
+    width:25%;
+    min-width: 100px;
+    text-align:center;
+   
+}
