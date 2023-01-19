@@ -14,7 +14,7 @@ function Home() {
         imgSrc: "https://images-eu.ssl-images-amazon.com/images/W/WEBP_402378-T1/images/G/31/img22/Events/Jupiter-22/kiosk/PC_CC_UNREC_1x_EN._SY304_CB609456025_.jpg"
     },
     {
-        title: "Amazon Sales",
+        title: "Amazo Sales",
         price: "2000",
         imgSrc: "https://images-eu.ssl-images-amazon.com/images/W/WEBP_402378-T1/images/G/31/img22/Events/Jupiter-22/kiosk/PC_CC_UNREC_1x_EN._SY304_CB609456025_.jpg"
     },

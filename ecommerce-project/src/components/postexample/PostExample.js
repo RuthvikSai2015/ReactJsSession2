@@ -20,11 +20,11 @@ function PostExample() {
     //         .then(json => console.log())
     //         .catch(error => console.error(error))
     // }, [])
-    useEffect(()=>{
-        fetch('http://localhost:8080/messages')
-        .then(response => response.json())
-        .then(json => console.log())
-        .catch(error => console.error(error))
-    })
+    // useEffect(()=>{
+    //     fetch('http://localhost:8080/messages')
+    //     .then(response => response.json())
+    //     .then(json => console.log())
+    //     .catch(error => console.error(error))
+    // })
 }
 export default PostExample;

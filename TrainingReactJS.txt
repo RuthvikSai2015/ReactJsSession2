@@ -740,7 +740,7 @@ https://fonts.google.com/specimen/Open+Sans
 
  Situation
 
-  1. one situation is present so i have two results
+  1. one situation is present so i have two results(outcomes)
  
   => if operator =>login => execute UserGreeting else GuestGreeting (if )
   conditional operator ternary 
@@ -753,19 +753,678 @@ https://fonts.google.com/specimen/Open+Sans
 
      age>18 && <DrivingLicense/>
 
-     true && true => t
-     false && true => f
-     true && false => f
-     false && false => f
+     true && true => true
+     false && true => false
+     true && false => false
+     false && false => false
 
 ==================================================================================
-  React Events 
+    React Events 
+
+    <button onclick="onButtonClick()">Click Me</button>
+    <script>
+    function onButtonClick(){
+       console.log("button is clicked")
+    }
+    </script>
+
+    JSX
+    <button onClick={onButtonClick} > Click Me </button>
+
+=================================================================================
+
+    React List and keys
+
+    <ul> 
+       <li>1</li>
+       <li>2</li>
+       <li>3</li>
+    </ul>
+
+    const numbers = [1,2,3,4,5]              // [2,4,6,8,10]
+
+    const doubleArray = numbers.map((number) => number*2);
+
+    ? -> Optional Chaining
+    if value exists complete the operation
+    if value doesnt exist do the next operation
+
+   Keys
+    
+   => to identify which items have been changed,added,removed from a list
+   => Keys should given for elements inside an array 
+
+====================================================================================
+  React Hooks
+
+  Function Components 
+             => one way (props) 
+  Class Components
+             => state and life cycle methods 
+
+ class Form extends React.Component{
+   // ability to use state and lifecycle
+ }
+ 
+ function Display(){ => Static Component
+ }
+ 
+  React Lifecycle Methods
+  Mounting => While Rendering the Component
+  Updating => State Update ,ex: counter update
+  UnMounting => remove the component from dom
+
+  componentDidMount(){
+  //
+  }
+  componentDidUpdate(){
+   //
+  }
+  componentWillUnmount(){
+   // 
+  }
+
+  disadv: mess up the code btw lifecycle methods
+
+  making the functions dynamic through "Hooks"
+ 
+  Hooks are nothing but functions that let you "hook into" React features(react state and   lifecycle) in functional component
+
+  Hooks was introduced in 16.8 versions
+
+  React useState Hook 
+
+  state => moving,stopped,paused,updated 
+
+  const [count,setCount] = useState(0);
+
+  const arrayRef = useState(0);
+  const count = arrayRef[0];
+  const setCount = arrayRef[1];
+
+  count = count+1; //not valid 
+
+  in useState() => not providing any value default is undefined
+
+ 1. Dont directly modify or change the state should go through setCount methods only
+
+   setCount(count + 1);//0+1//re-render
+   setCount(count + 1);
+
+  by the time state is getting updated (count ) and re-render again an instance of update state is called so react doesnt consider the previous value .it will take the initial value only
+
+ setCount((previousCount)=>previousCount+1);
+
+===============================================================================================
+
+ React useEffect Hook
+
+ Lifecycle methods we are using useEffect hook
+
+ componentDidMount(){  
+  // useEffect(() =>{
+        console.log("Mounting using useEffect()..")
+    })
+  }
+  componentDidUpdate(){
+   //  useEffect(() =>{
+         console.log("count state variable has been modified")
+    },[count])
+  }
+  componentWillUnmount(){
+   // try{
+          //filereader
+         //exception
+    }catch(){
+          close
+         //catch the block
+     }
+   finally{ 
+       close the file reader
+    }
+   //Memory leak 
+
+   => Release the resources used by my component (file reader,socket connection)
+   useEffect(() =>{
+        WebSocket.OPEN()
+
+         console.log("count state variable has been modified");
+
+        return()=> WebSocket.disconnect();
+    },[count])
+
+  }
+ we can achieve all this using useEffect Hook
+
+ Fetch is a browser api => used to make API Calls
+
+ await and async is not supported directly in react
+  
+ Await is in an async function to ensure that all promises that are returned in the function
+ are synchronized . 
+
+======================================================================================
+
+ Axios 
+
+  https://www.npmjs.com/package/axios
+  https://jsonplaceholder.typicode.com/posts
+
+  https://jsonplaceholder.typicode.com/users
+
+  https://jsonplaceholder.typicode.com/comments
+
+  Onclick API Calls => manipulate the content based on API data 
+
+=============================================================================================
+
+ How to create own Custom Hook?
+
+  1. Name of the hook should be started with "use"+"Hook"=> useHook 
+     it should understand as hook and automatically check on this hook
+
+  2. Call the hooks at the top level, dont call hooks inside loops,conditional statements and      nested funstions . With this rule react ensures is hooks are called in the same order each      time when component re-renders
+
+  3. Hooks should be called from React Component or from Custom Hook
+
+
+     function Form() {
+        const [count,setCount] = useState(0);
+        return a+b;
+      }
+
+ custom hooks => pass as normal parameters (we call it as a normal function)
+
+ Task2: pass ContentType to customHook and display data based on contenttype in CustomHookData
+
+=================================================================================================
+
+ Till now we have seen passing data from parent to child via props 
+
+  Pass Data from Child to Parent is through Events 
+
+================================================================================================
+
+  React Error Boundary
+
+   <Header/> //error 
+   <Nav/>
+   <Main/>
+   <Footer/>
+
+   if there is error in header component whole component tree will be destroyed 
+
+   Class => error boundary =>getDeviceErrorFromProps() ,componentDidCatch()
+
+   Functional Hooks
+   => third party library 
+
+  npm i react-error-boundary
+
+  <ErrorBoundary>
+      <Header />
+  </ErrorBoundary>
+
+  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+  => Design like Amazon Header 
+
+  => https://react-bootstrap.netlify.app/components/navs/#rb-docs-content
+
+==============================================================================================
+
+import Button from 'react-bootstrap/Button'; //best option 
+
+// or less ideally
+import { Button } from 'react-bootstrap';
+================================================================================
+
+  React Routing 
+---------------------------------------------
+
+  Routing(redirect) to particular component based on the user requirement
+  we are not refreshing the web page only re-rendering the particular component
+  
+ install third party library 
+ react-router-dom
+
+ npm i react-router-dom
+
+  <BrowserRoute>
+     <Routes>
+        <Route path="" element={}/>
+                     /{url}  which component
+        <Route path="" element={}/>
+     </Routes>
+ </BrowserRoute>
+
+   we need to wrap react app with Browser Router so that our application ensures for Routing
+   Routes ia parent which holds al the route
+   Route is a children of Routes .we can have 'n' Route 
+
+Task: Add a Image in NotFound Component
+===============================================================================================
+
+  Nested Routing 
+    <Routes>
+        <Route path="" element={}> //https://jsonplaceholder.typicode.com/posts
+           <Route /> // https://jsonplaceholder.typicode.com/posts/{id}
+        </Route>
+                   
+     </Routes>
+
+     <Posts> <Post/> </Posts> //render like this
+
+   * ====> Outlet will act like a placeholder ,we need to define it so that child components of nester route will be rendering there
+
+   To get the Parameters from url =>useParams hook
+
+  https://npmmirror.com/package/react-outlet#:~:text=React-Outlet%20provides%20two%20components  %20which%20aid%20in%20cross-component,a%201-1%20relationship%20between%20an%20Outlet%20and  %20Plug.
+  
+============================================================================================
+
+  React Forms
+
+  We need to take the data from the users
+  we need to validate the data
+  We need to send the data to the server
+
+  2 ways 
+  1. React normal way of taking the data and validation
+  2. Formik and Yup Library to handle form
+
+   https://www.w3schools.com/html/html_form_input_types.asp#:~:text=HTML%20Input%20Types.%20Here%20are%20the%20different%20input,%3Cinput%20type%3D%22date%22%3E.%20%3Cinput%20type%3D%22datetime-local%22%3E.%20%3Cinput%20type%3D%22email%22%3E.%20%3Cinput%20type%3D%22file%22%3E.
+
+
+  const initialValues = { email : "" , password: "",userName:""}
+  const [formValues,setFormValues] = useState(initialValues)
+
+  one function for one task 
+
+  1. to get the formValues
+  2. Validate them
+  3. if any errors report them
+  4. if no errors submit the form to server
+
+ Task: Take Phonenumber, Url and add custom validations
+
+==============================================================
+ 2 . use third party libraries for validation
+
+     https://formik.org/docs/overview
+
+     https://www.npmjs.com/package/yup
+
+  Yup is a javascript object schema validator 
+  Formik is a small library that helps us with 
+
+  1. Getting the values IN and OUT from form state
+  2. Based on the Error Message it will validate the form
+  3. handling form submission 
+
+  npm install formik yup
+
+  Formik will accept it will need 3 props
+
+  1.Initial Values
+  2.Validation Schema(Yup)
+  3.On Submit 
+
+Task : use Mobile Number , url ,age using formik and yup 
+==========================================================================
+ React Context Api 
+
+ we have a problem called Props Drilling for solving this React Context Api came into 
+ picture
+
+ => React context API will help in solving the props drilling problem
+
+ => React Context allows us to pass down and use the data to whatever component in     react without props
+
+ => In other words react context allows us to share the data across the component     more easily
+
+ When to use ? and how often we can use 
+
+  we should place data in React Context that doesnt need to be updated often 
+
+  Real time use cases
+
+  1. Theme data (light and dark mode)
+  2. Authenticated user data can be kept in context
+  3. Language specific data or locale specific data (internationalization)
+
+  React Context was not made to maintain the state management 
+  It was made to make consuming data easier
+
+  //Props drilling concept
+  function ReactContextApi(){
+    return (
+        <>
+        <Header theme={theme}/>
+        <Main theme={theme}/>
+        <SideBar theme={theme}/>
+        <Footer theme={theme}/>
+        </>
+    )
+  }
+  function Header({theme})
+  {
+    return (
+        <User theme={theme}/>
+        <Login theme={theme}/>
+        <Registration theme={theme}/>
+    )
+  }
+
+  1. Rendered Passed props
+  2. useContext
+
+Steps to use React Context 
+
+  1. Created context using createContext
+  2. Take our created context and wrap the provider around our component tree
+  3. put any value on our context provider using value props
+  4. Consumer(1.Rendered Passed props or 2. useContext)
+
+ React Developer Tools
+==================================================================
+
+  Components and Profiler
+==================================================================
+
+  How to Connect React js with Node js 
+  
+  will create 2 projects
+
+ 1. React(client)
+ 2. Node(Api)
+ 
+  React
+  npx create-react-app client
+
+  Node js
+  npx express-generator api
+
+  Default port number of react : 3000
+  Default port number of node :  3000
+
+  modify the port number : 2 options
+  1. modify the port number for nodejs project
+  2. modify the port for react js
+
+  => Goto api folder  => bin => open www file 15th modify the port number to 3002
+
+ => options how to modify the port no in react.go to package.json
+    scripts   "start": "set PORT=3003 && react-scripts start",
+
+ we will call http://localhost:3002/testAPI
+
+  Steps to write an API in Nodejs
+
+  1. express router (api)
+  2. Register that API 
+
+Task : string as output to react , add an object as response from api and display that in react
+
+  Mistakes usually we do 
+  1. Once the router is created , we need to register in app.js
+  2. As the backend api running(restart once the changes are done)
+  3. CORS issue 
+     npm install -S cors
+     import it in app.js file
+     and register it in app.js
+     restart the api project
+
+=============================================================================================
+
+ CSS GRID
+  how to create layouts for the projects
+
+  Figma
+  Adobe 
+  UI Mock up tools
+
+  height:100vh => all viewport need to occupy 
+
+  =========================================================================================
+  
+  fetch vs axios
+  fetch is a browser api 
+  axios is a third party library
+
+    fetch(`https://jsonplaceholder.typicode.com/`)
+        .then(response => response.json()) //Conversion
+        .then(json => setData(json))  //setting the data 
+
+  in axios we will be avoiding one then condition
+
+   axios.get(`https://jsonplaceholder.typicode.com/`)
+      .then(response => setData(response))
+
+   while receiving the data you need to convert it as json in fetch
+   while in axios we are avoiding that step as it is explicitly converting
+
+   2 differences
+
+   1.while receiving the data
+   2.while sending the data
+
+   fetch(url,{
+        method:"POST"
+        body: JSON.stringify(formData) //conversion
+   })
+   
+   axios({
+        url:"",
+        method:"POST",
+        data : {name:"savitha",age:26}
+   })
+   https://www.npmjs.com/package/axios
+
+  GET => to get data from server
+  POST => create resources
+  PUT => Updation of resources
+  DELETE => delete the resource
+
+  Task 1: Replace all fetch with axios
+  Task2 : create layout and make react components
+  
+ ======================================================================
+  React Styling
+  ---------------------
+  
+   <div class="App"> <!-- HTML -->
+   <div className="App"> <!-- React -->
+   
+     ways of styling in react
+	 1. CSS Stylesheet
+	 2. Internal Styling of Component(Inline)
+	 3. Styled Components
+	        third party library no need to apply styles manually 
+	 4. CSS Modules
+	     CSS generally css class names and animation names are scoped globally by default
+		 
+	 HTML
+	 <div style="background-color: red,color:white">
+	 
+	 Js
+	 <div style={{backgroundColor:'red',color:'white'}}
+	 
+	 first flower brace indicates javascript into jsx
+	 second flower brace represents the object literal
+	 
+	 3. https://styled-components.com/docs/basics#installation
+	    npm install --save styled-components
+		
+	Task 1 : Practise all the ways of Styling
+	Task 2: Explore the Style component documentation(how to pass props to styled component)
+	
+    Problem: Since css class names are globally scoped it will get overridden
+	
+	how to avoid this?
+	CSS modules will solve the css class names conflict override problem
+	A unique has code will be generated to classes
+===================================================================================
+ Redux 
+ ------------
+ Redux is a design pattern can use with Ui frameworks or libraries(Angular,Vue)
+ 
+ Design Pattern is a solution for common problem 
+ It is used to solve the problem of Global management of state or store
+ 
+ if you want to share some data,if the application is large it will be very difficult to manage
+ thats why we are going to redux 
+ 
+ Redux is not tightly coupled with react 
+	 
+   React Context was not made to maintain the state management 
+   but Redux was developed to maintain the state management
+   
+  we can have "N" no of states in redux
+  
+  when the state is not updated often we go for Context 
+  when the state is updated often we go for Redux
+  
+  There will be only one store or state at high level(not every component can modify)
+  they need to follow some rule
+  
+  only reducers can update the global state
+  global maintenance of store
+
+  https://redux.js.org/
+  
+  Redux Essential Principles
+  
+  1. Dont change the global store directly we need go through reducer function
+  2. Reducer function should be a pure function(old and give new state not modify)
+  
+  npm install redux react-redux @reduxjs/toolkit
+  
+  LoginReducer for storing login data
+  RegistrationReducer for storing registration data
+  
+  useDispatch => make use of actions from reducer1 
+  useSelector => subscription component(make use of state)
+  
+  Task: Add a payload,depending on payload change the state
+  
+============================================================================================
+ Reactjs Authentication with firebase
+ 
+  how to use the firebase 
+  1. Gives DB
+  2. we use firebase it gives the authentication
+  3. process is simple
+  
+  Task: Design form using bootstrap
+  Task: use any one of the additional login providers
+ 1. go to https://console.firebase.google.com/u/0/ and create project
+ 2. Goto Authentication on left nav (under Build)
+ 3. Enable Native Provider for email/password
+ 4. Create a firecloud database to store info 
+ 5. Create a new app by going to Project Settings
+ 6. After creating app => npm install firebase
+ 7. copy the content of firebase configurations
+ 8. create a file called Firebase.js under src folder and paste the firebase configuration code
+ 9 . import {getAuth} from 'firebase/auth'
+     const auth = getAuth(app);
+     export {auth}
+ 10. npm install react-firebase-hooks
+ 
+   host the application on firebase 
+   
+  Task : Modify the sign in button to sign out 
+  
+   https://react.rocks/ => try this projects out
+   https://reactjsexample.com/
+   
+   npm run build => it will give you production ready
+   build => small crunches of optimised folder
+   
+   we need build optimised folder for production ready deployments 
+   
+   run build in local and check at first then deploy it 
+   Run the production ready build in your local machine
+   =>serve -s build
+   
+   npm install -s serve
+   =>serve -s build -l 4000
+   
+   Steps to host the project
+   1. Under Build option => Hosting option
+      npm install -g firebase-tools
+	  
+	  
+    show how to build components for the project
+   
+   1.Reusable components
+   
+   1.Created a static Component
+   2. Made it as a generic component by adding props
+   3. I am passing dynamic data from Home.js
+   
+   
+   =>Interview Questions
+   =>Post call
+   =>Spring boot integration 
+   
+    POST,PUT 
+	
+	POST means we are trying to create a new resource(in Database)
+	PUT is updating
+	
+	HTTP Status Codes
+	
+	Informational responses (100–199)
+	Successful responses (200–299)
+	Redirection messages (300–399)
+	Client error responses (400–499)
+	Server error responses (500–599)
+	
+	Frontend Developer roles
+	
+	1. UX screen figma or adobe tools
+	2. understand business workflow
+	3. Dont assume anything
+	4. expected input and output
+	5. which browser it should be supported
+	6. which deviced responsive design
+	7. performance app
+	8. code review and refactoring code
+	
+	==================================================================
+	
+	Spring Boot integration 
+	
+	1.Java
+	IDE
+	
+	2. Set Env Variables
+	   set ENV_HOME set path till bin
+	        PATH set till jdk
+			
+	3. VS Code Extensions
+	   Extension Pack for Java
+	   Spring Boot Extension Pack
+	   
+	4.@CrossOrigin -- add as a dependency
+	
+	<React.StrictMode> => persist the state and it needs to get back
+	   
+	savi.ruthvik@gmail.com
+	
+
+  
+  
+    
+
+
+  
+
+
+
 
  
-
- 
- 
-     
 
  
  
